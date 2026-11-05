@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int i, a = 0, e = 0, o = 0, u = 0, ii = 0;
+    char ch;
+
+    printf("Enter string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        ch = tolower(str[i]);
+        if(ch == 'a') a++;
+        else if(ch == 'e') e++;
+        else if(ch == 'i') ii++;
+        else if(ch == 'o') o++;
+        else if(ch == 'u') u++;
+    }
+
+    printf("Frequency of a = %d\n", a);
+    printf("Frequency of e = %d\n", e);
+    printf("Frequency of i = %d\n", ii);
+    printf("Frequency of o = %d\n", o);
+    printf("Frequency of u = %d\n", u);
+
+    return 0;
+}
